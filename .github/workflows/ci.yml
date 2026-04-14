@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI/CD
 
 on:
   push:
@@ -27,3 +27,6 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Build Docker image
+        run: docker build -t my-node-app:latest .
